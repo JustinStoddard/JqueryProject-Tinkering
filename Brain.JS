@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
 
     function computer_choice(){
-      var computer_choice = Math.random(3);
+      var computer_choice = Math.floor((Math.random() * 3) + 1);
         
         switch (computer_choice){
             case computer_choice === 1:
@@ -40,41 +40,24 @@ $(document).ready(function(){
                 computer_choice === scissors
         }
       }
-    }
 
-    function compare_choices(){
-      switch (player_choice || computer_choice){
-        case player_choice === computer_choice:
-          console.log('Tie')
-        case player_choice === rock || computer_choice === scissors:
-          console.log('You Win!')
-        case player_choice === paper || computer_choice === rock:
-          console.log('You Win')
-        case player_choice === scissors || computer_choice === paper:
-          console.log('You Win')
-      }
-    }
-
-    function rock(){
-    
-        
-    }
-    $('#rock').on('click', function(){
-        
+    // function compare_choices(){
+      
+    //     if (player_choice === computer_choice) {
+    //       console.log('Tie')
+    //     } else if { (player_choice === rock && computer_choice === scissors)
+    //       console.log('You Win!')
+    //     case player_choice === paper && computer_choice === rock:
+    //       console.log('You Win')
+    //     case player_choice === scissors && computer_choice === paper:
+    //       console.log('You Win')
+    //     else {
+    //       console.log('You Lose!')
+    //     }
+    // }
+  
+    $('.option').on('click', function(){
+      console.log(this.id)
     });
 
-    function paper(){
-
-
-    }
-    $('#paper').on('click', function(){
-
-    });
-
-    function scissors(){
-
-    }
-    $('scissors').on('click', function(){
-
-    });
 });
